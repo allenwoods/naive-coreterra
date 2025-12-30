@@ -1,0 +1,174 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alex Morgan",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCgLMjW8x240sh1Nfc2eziuKKztJOrS-snZX06O9Lu5dhonyIdfyB46tBZci1ByjltDkNwid3pE1RQpLhDIWXXNSGX7FH0jqq63r32Lnl5lzqLmLo0f891UaFnE3zYD_RFbuDZDC31Hqz0GZIX817qCiSx5ituryOweosJzbhd0Vc5ARdOHunhX-y4J1FWQ-6JnFSa2ghdmRyjYLakFeB-r3j6Ks2fzaMWK8ILuCpYjQhl6plwe7nG3l-9JVk8YVIVtPkXcQBA1Fsw",
+      "role": "Designer",
+      "level": 14,
+      "currentXP": 350,
+      "maxXP": 500,
+      "gold": 1250,
+      "streak": 14,
+      "inventory": [],
+      "stats": {
+        "focus": 15,
+        "execution": 12,
+        "planning": 8,
+        "teamwork": 10,
+        "expertise": 9,
+        "streak": 14
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Fix navigation z-index issue",
+      "status": "inbox",
+      "createdAt": "2023-10-24T10:30:00",
+      "priority": false,
+      "xpReward": 0
+    },
+    {
+      "id": 2,
+      "title": "Draft Q3 Financial Report",
+      "status": "organized",
+      "projectId": "p1",
+      "priority": true,
+      "difficulty": "Hard",
+      "estimatedTime": "2h",
+      "xpReward": 100,
+      "subtasks": [
+        {
+          "id": 1,
+          "text": "Gather data",
+          "done": true
+        },
+        {
+          "id": 2,
+          "text": "Charts",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Review Wireframes",
+      "status": "organized",
+      "projectId": "p1",
+      "priority": false,
+      "difficulty": "Med",
+      "estimatedTime": "15m",
+      "xpReward": 20
+    },
+    {
+      "id": 4,
+      "title": "Email Marketing Team",
+      "status": "inbox",
+      "createdAt": "2023-10-23",
+      "priority": false
+    },
+    {
+      "id": 5,
+      "title": "Define OAuth scopes",
+      "status": "clarified",
+      "difficulty": "Med",
+      "estimatedTime": "1h",
+      "xpReward": 50
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "title": "Website Redesign",
+      "progress": 65,
+      "totalTasks": 10,
+      "completedTasks": 6
+    },
+    {
+      "id": "p2",
+      "title": "Mobile App API",
+      "progress": 30,
+      "totalTasks": 5,
+      "completedTasks": 1
+    }
+  ],
+  "shopItems": [
+    {
+      "id": "item_xp_potion",
+      "name": "2x XP Potion",
+      "cost": 350,
+      "type": "consumable"
+    },
+    {
+      "id": "item_theme_neon",
+      "name": "Dark Mode: Neon",
+      "cost": 1000,
+      "type": "cosmetic"
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "title": "Inbox Zero",
+      "desc": "Cleared Inbox 5 days in a row",
+      "icon": "military_tech",
+      "color": "text-yellow-500",
+      "bg": "bg-yellow-50",
+      "border": "border-yellow-100",
+      "unlocked": true
+    },
+    {
+      "id": 2,
+      "title": "Deep Focus",
+      "desc": "Completed 4h of focus time",
+      "icon": "psychology",
+      "color": "text-blue-500",
+      "bg": "bg-blue-50",
+      "border": "border-blue-100",
+      "unlocked": true
+    },
+    {
+      "id": 3,
+      "title": "Early Bird",
+      "desc": "Started working before 8AM",
+      "icon": "rocket_launch",
+      "color": "text-purple-500",
+      "bg": "bg-purple-50",
+      "border": "border-purple-100",
+      "unlocked": true
+    },
+    {
+      "id": 4,
+      "title": "Team Player",
+      "desc": "Collaborated on 5 tasks",
+      "icon": "group",
+      "color": "text-emerald-500",
+      "bg": "bg-emerald-50",
+      "border": "border-emerald-100",
+      "unlocked": false
+    },
+    {
+      "id": 5,
+      "title": "Streak Master",
+      "desc": "Reach a 30 day streak",
+      "icon": "local_fire_department",
+      "color": "text-orange-500",
+      "bg": "bg-orange-50",
+      "border": "border-orange-100",
+      "unlocked": false
+    },
+    {
+      "id": 6,
+      "title": "Task Slayer",
+      "desc": "Complete 100 tasks",
+      "icon": "check_circle",
+      "color": "text-red-500",
+      "bg": "bg-red-50",
+      "border": "border-red-100",
+      "unlocked": false
+    }
+  ]
+}
+
