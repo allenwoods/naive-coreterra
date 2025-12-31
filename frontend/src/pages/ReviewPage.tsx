@@ -10,28 +10,18 @@ export const ReviewPage: React.FC = () => {
 
   return (
     <div className="flex-1 flex flex-col h-full bg-background-light overflow-hidden">
-      <div className="px-8 pt-8 pb-4 flex flex-col gap-4 border-b border-border-color bg-surface-light shrink-0">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
-          <div>
-            <h1 className="text-3xl font-display font-bold text-text-main tracking-tight leading-none">
-              Review & Retrospective
-            </h1>
-            <p className="text-text-secondary mt-1 text-base">
-              Analyze your productivity, experience gained, and team collaborations.
-            </p>
-          </div>
-          <div className="flex bg-slate-100 p-1 rounded-lg self-start md:self-auto">
-            {['Daily', 'Weekly', 'Monthly'].map(p => (
-              <Button
-                key={p}
-                onClick={() => setPeriod(p)}
-                variant={period === p ? 'default' : 'ghost'}
-                size="sm"
-              >
-                {p}
-              </Button>
-            ))}
-          </div>
+      <div className="px-8 py-6 border-b border-border-color bg-surface-light shrink-0 flex justify-end items-center">
+        <div className="flex bg-slate-100 p-1 rounded-lg">
+          {['Daily', 'Weekly', 'Monthly'].map(p => (
+            <Button
+              key={p}
+              onClick={() => setPeriod(p)}
+              variant={period === p ? 'default' : 'ghost'}
+              size="sm"
+            >
+              {p}
+            </Button>
+          ))}
         </div>
       </div>
 

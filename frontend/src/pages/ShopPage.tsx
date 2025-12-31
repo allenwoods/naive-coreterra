@@ -30,14 +30,7 @@ export const ShopPage: React.FC = () => {
 
   return (
     <div className="flex-1 flex flex-col h-full bg-background-light overflow-hidden">
-      <div className="px-8 py-6 bg-surface-light border-b border-border-color flex flex-col md:flex-row justify-between items-center gap-4 shrink-0">
-        <div>
-          <h1 className="text-3xl font-display font-bold text-text-main tracking-tight flex items-center gap-3">
-            <span className="material-symbols-outlined text-yellow-500 text-4xl">storefront</span>
-            The Shop
-          </h1>
-          <p className="text-text-secondary mt-1">Spend your hard-earned Gold on productivity boosters.</p>
-        </div>
+      <div className="px-8 py-6 bg-surface-light border-b border-border-color flex justify-end items-center shrink-0">
         <div className="bg-yellow-50 border border-yellow-200 rounded-xl px-6 py-3 flex items-center gap-4 shadow-sm">
           <div className="text-right">
             <p className="text-[10px] font-bold text-yellow-600 uppercase tracking-wider">Your Balance</p>

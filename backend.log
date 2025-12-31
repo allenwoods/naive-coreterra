@@ -1,185 +1,61 @@
 INFO:     Will watch for changes in these directories: ['/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend']
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [727] using WatchFiles
+INFO:     Started reloader process [76287] using WatchFiles
 (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
-INFO:     Started server process [738]
+INFO:     Started server process [76292]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     127.0.0.1:55308 - "GET /api/tasks HTTP/1.1" 403 Forbidden
-INFO:     127.0.0.1:55311 - "GET /api/projects HTTP/1.1" 403 Forbidden
-INFO:     127.0.0.1:55312 - "GET /api/users/me HTTP/1.1" 403 Forbidden
-INFO:     127.0.0.1:55308 - "GET /api/tasks HTTP/1.1" 403 Forbidden
-INFO:     127.0.0.1:55314 - "GET /api/projects HTTP/1.1" 403 Forbidden
-INFO:     127.0.0.1:55311 - "GET /api/users/me HTTP/1.1" 403 Forbidden
-INFO:     127.0.0.1:55318 - "OPTIONS /api/tasks HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55321 - "OPTIONS /api/projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55318 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55323 - "GET /api/users/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55321 - "GET /api/tasks HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55325 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55318 - "GET /api/projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55323 - "GET /api/users/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55327 - "OPTIONS /api/tasks HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55321 - "GET /api/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55328 - "OPTIONS /api/projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55323 - "GET /api/tasks HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55327 - "GET /api/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55328 - "GET /api/projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55321 - "GET /api/users/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55321 - "GET /api/users/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55337 - "OPTIONS /api/auth/login HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55337 - "POST /api/auth/login HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55337 - "OPTIONS /api/users/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55337 - "GET /api/users/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55367 - "POST /api/auth/login HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55367 - "GET /api/users/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55399 - "OPTIONS /api/gamification/achievements HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55399 - "OPTIONS /api/gamification/achievements HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55399 - "GET /api/gamification/achievements HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55401 - "GET /api/gamification/achievements HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55401 - "OPTIONS /api/gamification/shop HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55399 - "OPTIONS /api/gamification/shop HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55399 - "GET /api/gamification/shop HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55401 - "GET /api/gamification/shop HTTP/1.1" 200 OK
-WARNING:  WatchFiles detected changes in 'app/services/auth_service.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [738]
-Process SpawnProcess-2:
-Traceback (most recent call last):
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
-    target(sockets=sockets)
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/server.py", line 61, in run
-    return asyncio.run(self.serve(sockets=sockets))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
-    return runner.run(main)
-           ^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
-    return self._loop.run_until_complete(task)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/server.py", line 68, in serve
-    config.load()
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/config.py", line 467, in load
-    self.loaded_app = import_from_string(self.app)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/importer.py", line 21, in import_from_string
-    module = importlib.import_module(module_str)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/importlib/__init__.py", line 90, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/app/main.py", line 3, in <module>
-    from app.routers import auth, tasks, projects, users, gamification
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/app/routers/auth.py", line 3, in <module>
-    from app.services.auth_service import authenticate_user, create_access_token
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/app/services/auth_service.py", line 67, in <module>
-    f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"E","location":"auth_service.py:47","message":"Before HARDCODED_USER init","data":{},"timestamp":int(datetime.now().timestamp()*1000)})+"\n")
-            ^^^^
-NameError: name 'json' is not defined. Did you forget to import 'json'
-WARNING:  WatchFiles detected changes in 'app/services/auth_service.py'. Reloading...
-Process SpawnProcess-3:
-Traceback (most recent call last):
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
-    target(sockets=sockets)
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/server.py", line 61, in run
-    return asyncio.run(self.serve(sockets=sockets))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
-    return runner.run(main)
-           ^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
-    return self._loop.run_until_complete(task)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/server.py", line 68, in serve
-    config.load()
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/config.py", line 467, in load
-    self.loaded_app = import_from_string(self.app)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/importer.py", line 21, in import_from_string
-    module = importlib.import_module(module_str)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/importlib/__init__.py", line 90, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/app/main.py", line 3, in <module>
-    from app.routers import auth, tasks, projects, users, gamification
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/app/routers/auth.py", line 3, in <module>
-    from app.services.auth_service import authenticate_user, create_access_token
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/app/services/auth_service.py", line 49, in <module>
-    f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"E","location":"auth_service.py:47","message":"Before HARDCODED_USER init","data":{},"timestamp":int(datetime.now().timestamp()*1000)})+"\n")
-            ^^^^
-NameError: name 'json' is not defined. Did you forget to import 'json'
-WARNING:  WatchFiles detected changes in 'app/middleware/auth.py'. Reloading...
-Process SpawnProcess-4:
-Traceback (most recent call last):
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
-    self.run()
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/multiprocessing/process.py", line 108, in run
-    self._target(*self._args, **self._kwargs)
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
-    target(sockets=sockets)
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/server.py", line 61, in run
-    return asyncio.run(self.serve(sockets=sockets))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
-    return runner.run(main)
-           ^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
-    return self._loop.run_until_complete(task)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/server.py", line 68, in serve
-    config.load()
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/config.py", line 467, in load
-    self.loaded_app = import_from_string(self.app)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/.venv/lib/python3.12/site-packages/uvicorn/importer.py", line 21, in import_from_string
-    module = importlib.import_module(module_str)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/allenwoods/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/importlib/__init__.py", line 90, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/app/main.py", line 3, in <module>
-    from app.routers import auth, tasks, projects, users, gamification
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/app/routers/auth.py", line 3, in <module>
-    from app.services.auth_service import authenticate_user, create_access_token
-  File "/Users/allenwoods/Sync/2-engineering/naive-coreterra/backend/app/services/auth_service.py", line 49, in <module>
-    f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"E","location":"auth_service.py:47","message":"Before HARDCODED_USER init","data":{},"timestamp":int(datetime.now().timestamp()*1000)})+"\n")
-            ^^^^
-NameError: name 'json' is not defined. Did you forget to import 'json'
-INFO:     Stopping reloader process [727]
+INFO:     127.0.0.1:54282 - "OPTIONS /api/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54285 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54282 - "OPTIONS /api/users/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54286 - "OPTIONS /api/users/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54285 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54289 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54291 - "OPTIONS /api/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54292 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54292 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54291 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54289 - "GET /api/users/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54285 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54289 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54285 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54292 - "GET /api/users/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54291 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54292 - "GET /api/users/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54291 - "GET /api/users/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54350 - "OPTIONS /api/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54350 - "POST /api/tasks HTTP/1.1" 201 Created
+INFO:     127.0.0.1:54359 - "OPTIONS /api/tasks/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54359 - "PUT /api/tasks/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54362 - "PUT /api/tasks/6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54699 - "OPTIONS /api/tasks/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54699 - "PUT /api/tasks/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54701 - "OPTIONS /api/tasks/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54701 - "PUT /api/tasks/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55038 - "OPTIONS /api/gamification/achievements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55039 - "OPTIONS /api/gamification/achievements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55038 - "GET /api/gamification/achievements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55039 - "GET /api/gamification/achievements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55058 - "OPTIONS /api/gamification/shop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55059 - "OPTIONS /api/gamification/shop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55059 - "GET /api/gamification/shop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55058 - "GET /api/gamification/shop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56117 - "OPTIONS /api/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56117 - "POST /api/tasks HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56123 - "OPTIONS /api/tasks/7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56123 - "PUT /api/tasks/7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56169 - "GET /api/gamification/achievements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56169 - "GET /api/gamification/achievements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56171 - "GET /api/gamification/shop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56171 - "GET /api/gamification/shop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56171 - "GET /api/gamification/achievements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56171 - "GET /api/gamification/achievements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56171 - "GET /api/gamification/shop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56173 - "GET /api/gamification/shop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56173 - "GET /api/gamification/achievements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56171 - "GET /api/gamification/achievements HTTP/1.1" 200 OK

@@ -4,11 +4,10 @@ import { useApp } from '@/context/AppContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Input } from '@/components/ui/input';
 
 export const InboxPage: React.FC = () => {
   const navigate = useNavigate();
-  const { tasks, updateTask, createTask } = useApp();
+  const { tasks, updateTask } = useApp();
   const [mode, setMode] = useState<'list' | 'process'>('list');
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
 
@@ -54,15 +53,8 @@ export const InboxPage: React.FC = () => {
 
   return (
     <div className="flex-1 flex flex-col h-full bg-background-light overflow-hidden">
-      <div className="px-6 py-6 md:px-10 md:pt-8 md:pb-6 flex flex-col gap-4 border-b border-border-color bg-surface-light shrink-0">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-3xl font-display font-bold text-text-main tracking-tight leading-none">Inbox</h1>
-            <p className="text-text-secondary mt-1 text-base">
-              {mode === 'list' ? 'Capture and organize your inputs.' : 'Process inputs one by one.'}
-            </p>
-          </div>
-          <div className="flex items-center gap-3">
+      <div className="px-8 py-6 border-b border-border-color bg-surface-light shrink-0 flex justify-end items-center">
+        <div className="flex items-center gap-3">
             {mode === 'list' && inboxItems.length > 0 && (
               <Button onClick={() => setMode('process')} className="flex items-center gap-2">
                 <span className="material-icons-round text-sm">play_arrow</span>
@@ -75,11 +67,6 @@ export const InboxPage: React.FC = () => {
                 <span className="hidden md:inline">List View</span>
               </Button>
             )}
-            <Button onClick={() => navigate('/capture')} className="flex items-center gap-2">
-              <span className="material-icons-round">add</span>
-              <span className="hidden md:inline">Capture</span>
-            </Button>
-          </div>
         </div>
       </div>
 

@@ -3,7 +3,237 @@
 > vite
 
 
-  VITE v5.4.21  ready in 150 ms
+  VITE v5.4.21  ready in 1005 ms
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
+10:13:10 AM [vite] ✨ new dependencies optimized: @radix-ui/react-select
+10:13:10 AM [vite] ✨ optimized dependencies changed. reloading
+10:15:58 AM [vite] hmr update /src/pages/InboxPage.tsx, /src/index.css
+10:16:10 AM [vite] hmr update /src/pages/InboxPage.tsx, /src/index.css
+10:17:33 AM [vite] hmr update /src/pages/InboxPage.tsx, /src/index.css
+10:17:44 AM [vite] hmr update /src/pages/InboxPage.tsx, /src/index.css
+10:17:53 AM [vite] hmr update /src/pages/InboxPage.tsx, /src/index.css
+10:22:49 AM [vite] hmr update /src/pages/NotificationPage.tsx, /src/index.css
+10:22:58 AM [vite] hmr update /src/pages/ReviewPage.tsx, /src/index.css
+10:23:05 AM [vite] hmr update /src/pages/AchievementsPage.tsx, /src/index.css
+10:23:14 AM [vite] hmr update /src/pages/ShopPage.tsx, /src/index.css
+10:23:20 AM [vite] hmr update /src/pages/ProfilePage.tsx, /src/index.css
+10:23:28 AM [vite] hmr update /src/pages/TeamPage.tsx, /src/index.css
+10:23:28 AM [vite] Internal server error: /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/src/pages/TeamPage.tsx: Unterminated JSX contents. (25:10)
+
+  23 |         </Card>
+  24 |       </div>
+> 25 |     </div>
+     |           ^
+  26 |   );
+  27 | };
+  28 |
+  Plugin: vite:react-babel
+  File: /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/src/pages/TeamPage.tsx:25:10
+  23 |          </Card>
+  24 |        </div>
+  25 |      </div>
+     |            ^
+  26 |    );
+  27 |  };
+      at constructor (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at TypeScriptParserMixin.jsxReadToken (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4477:20)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4803:12)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10042:11)
+      at TypeScriptParserMixin.nextToken (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:5807:10)
+      at TypeScriptParserMixin.next (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:5717:10)
+      at TypeScriptParserMixin.eat (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:5721:12)
+      at TypeScriptParserMixin.expect (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:6923:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4709:10)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4724:37)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4727:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4778:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4788:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9890:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9828:39
+      at TypeScriptParserMixin.tryParse (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:6932:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9828:18)
+      at /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10864:39
+      at TypeScriptParserMixin.allowInAnd (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12500:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10864:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12567:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11747:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9890:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9839:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10844:39
+      at TypeScriptParserMixin.allowInAnd (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12495:16)
+      at TypeScriptParserMixin.parseExpression (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10844:17)
+      at TypeScriptParserMixin.parseReturnStatement (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:13218:28)
+      at TypeScriptParserMixin.parseStatementContent (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12874:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+10:23:35 AM [vite] hmr update /src/pages/EngagePage.tsx, /src/index.css
+10:23:40 AM [vite] hmr update /src/pages/InboxPage.tsx, /src/index.css
+10:23:40 AM [vite] Internal server error: /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/src/pages/InboxPage.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (75:6)
+
+  73 |       </div>
+  74 |
+> 75 |       <div className="flex-1 overflow-y-auto p-6 md:p-10 relative">
+     |       ^
+  76 |         {mode === 'list' ? (
+  77 |           <div className="max-w-5xl mx-auto flex flex-col gap-6">
+  78 |             <Card>
+  Plugin: vite:react-babel
+  File: /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/src/pages/InboxPage.tsx:75:6
+  73 |        </div>
+  74 |  
+  75 |        <div className="flex-1 overflow-y-auto p-6 md:p-10 relative">
+     |        ^
+  76 |          {mode === 'list' ? (
+  77 |            <div className="max-w-5xl mx-auto flex flex-col gap-6">
+      at constructor (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4771:18)
+      at TypeScriptParserMixin.jsxParseElement (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4778:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4788:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9890:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9828:39
+      at TypeScriptParserMixin.tryParse (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:6932:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9828:18)
+      at /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10864:39
+      at TypeScriptParserMixin.allowInAnd (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12500:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10864:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12567:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11747:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9890:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9839:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10844:39
+      at TypeScriptParserMixin.allowInAnd (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12495:16)
+      at TypeScriptParserMixin.parseExpression (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10844:17)
+      at TypeScriptParserMixin.parseReturnStatement (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:13218:28)
+      at TypeScriptParserMixin.parseStatementContent (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12874:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:13392:61)
+      at TypeScriptParserMixin.parseBlockBody (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:13385:10)
+      at TypeScriptParserMixin.parseBlock (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:13373:10)
+      at TypeScriptParserMixin.parseFunctionBody (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12174:24)
+      at TypeScriptParserMixin.parseArrowExpression (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12149:10)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11759:12)
+      at TypeScriptParserMixin.parseExprAtom (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+10:23:42 AM [vite] hmr update /src/pages/InboxPage.tsx, /src/index.css
+10:23:54 AM [vite] hmr update /src/pages/InboxPage.tsx, /src/index.css
+10:23:56 AM [vite] hmr update /src/pages/InboxPage.tsx, /src/index.css
+10:24:04 AM [vite] hmr update /src/pages/ProfilePage.tsx, /src/index.css
+10:24:04 AM [vite] hmr update /src/pages/ShopPage.tsx, /src/index.css
+10:24:04 AM [vite] hmr update /src/pages/AchievementsPage.tsx, /src/index.css
+10:24:04 AM [vite] hmr update /src/pages/TeamPage.tsx, /src/index.css
+10:24:04 AM [vite] hmr update /src/pages/NotificationPage.tsx, /src/index.css
+10:24:04 AM [vite] hmr update /src/pages/ReviewPage.tsx, /src/index.css
+10:24:04 AM [vite] hmr update /src/pages/EngagePage.tsx, /src/index.css
+10:24:04 AM [vite] hmr update /src/pages/InboxPage.tsx, /src/index.css
+10:24:04 AM [vite] Internal server error: /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/src/pages/TeamPage.tsx: Unterminated JSX contents. (25:10)
+
+  23 |         </Card>
+  24 |       </div>
+> 25 |     </div>
+     |           ^
+  26 |   );
+  27 | };
+  28 |
+  Plugin: vite:react-babel
+  File: /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/src/pages/TeamPage.tsx:25:10
+  23 |          </Card>
+  24 |        </div>
+  25 |      </div>
+     |            ^
+  26 |    );
+  27 |  };
+      at constructor (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at TypeScriptParserMixin.jsxReadToken (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4477:20)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4803:12)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10042:11)
+      at TypeScriptParserMixin.nextToken (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:5807:10)
+      at TypeScriptParserMixin.next (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:5717:10)
+      at TypeScriptParserMixin.eat (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:5721:12)
+      at TypeScriptParserMixin.expect (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:6923:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4709:10)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4724:37)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4727:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4778:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4788:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9890:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9828:39
+      at TypeScriptParserMixin.tryParse (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:6932:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9828:18)
+      at /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10864:39
+      at TypeScriptParserMixin.allowInAnd (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12500:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10864:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12567:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11747:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9890:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9839:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10844:39
+      at TypeScriptParserMixin.allowInAnd (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12495:16)
+      at TypeScriptParserMixin.parseExpression (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:10844:17)
+      at TypeScriptParserMixin.parseReturnStatement (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:13218:28)
+      at TypeScriptParserMixin.parseStatementContent (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12874:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:9569:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/allenwoods/Sync/2-engineering/naive-coreterra/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+10:25:06 AM [vite] hmr update /src/pages/TeamPage.tsx, /src/index.css
+10:25:11 AM [vite] hmr update /src/pages/TeamPage.tsx, /src/index.css
+10:25:45 AM [vite] hmr update /src/pages/InboxPage.tsx, /src/index.css

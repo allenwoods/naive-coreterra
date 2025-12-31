@@ -12,16 +12,6 @@ export const AchievementsPage: React.FC = () => {
 
   return (
     <div className="flex-1 flex flex-col h-full bg-background-light overflow-hidden">
-      <div className="px-8 py-6 bg-surface-light border-b border-border-color flex flex-col md:flex-row justify-between items-center gap-4 shrink-0">
-        <div>
-          <h1 className="text-3xl font-display font-bold text-text-main tracking-tight flex items-center gap-3">
-            <span className="material-symbols-outlined text-yellow-500 text-4xl">emoji_events</span>
-            Achievements
-          </h1>
-          <p className="text-text-secondary mt-1">Track your milestones and badges.</p>
-        </div>
-      </div>
-
       <div className="flex-1 overflow-y-auto p-8">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-lg font-bold text-text-main mb-6 flex items-center gap-2">

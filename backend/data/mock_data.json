@@ -25,9 +25,9 @@
     {
       "id": 1,
       "title": "Fix navigation z-index issue",
-      "status": "inbox",
+      "status": "organized",
       "createdAt": "2023-10-24T10:30:00",
-      "priority": false,
+      "priority": true,
       "xpReward": 0
     },
     {
@@ -65,7 +65,7 @@
     {
       "id": 4,
       "title": "Email Marketing Team",
-      "status": "inbox",
+      "status": "waiting",
       "createdAt": "2023-10-23",
       "priority": false
     },
@@ -76,6 +76,28 @@
       "difficulty": "Med",
       "estimatedTime": "1h",
       "xpReward": 50
+    },
+    {
+      "title": "Test adding new task",
+      "status": "organized",
+      "priority": false,
+      "description": null,
+      "createdAt": "2025-12-31T02:13:36.096406",
+      "xpReward": 100,
+      "id": 6,
+      "projectId": "p2",
+      "difficulty": "Med",
+      "estimatedTime": "1h",
+      "subtasks": []
+    },
+    {
+      "title": "add test task",
+      "status": "organized",
+      "priority": true,
+      "description": null,
+      "createdAt": "2025-12-31T02:25:20.845766",
+      "xpReward": 0,
+      "id": 7
     }
   ],
   "projects": [
@@ -171,4 +193,3 @@
     }
   ]
 }
-

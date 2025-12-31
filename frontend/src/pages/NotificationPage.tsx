@@ -5,14 +5,7 @@ import { Button } from '@/components/ui/button';
 export const NotificationPage: React.FC = () => {
   return (
     <div className="flex-1 flex flex-col h-full bg-background-light overflow-hidden">
-      <div className="px-8 py-6 bg-surface-light border-b border-border-color flex flex-col md:flex-row justify-between items-center gap-4 shrink-0">
-        <div>
-          <h1 className="text-3xl font-display font-bold text-text-main tracking-tight flex items-center gap-3">
-            <span className="material-symbols-outlined text-slate-800 text-3xl">notifications</span>
-            Notifications
-          </h1>
-          <p className="text-text-secondary mt-1">Stay updated with your latest activities.</p>
-        </div>
+      <div className="px-8 py-6 bg-surface-light border-b border-border-color flex justify-end items-center shrink-0">
         <Button variant="ghost">Mark all as read</Button>
       </div>
 

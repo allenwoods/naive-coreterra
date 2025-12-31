@@ -57,23 +57,12 @@ cd backend
 ```bash
 # 使用 uv（推荐）
 uv sync
-
-# 或使用 pip
-pip install -e .
-
-# 或创建虚拟环境
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -e .
 ```
 
 3. 启动后端服务器：
 ```bash
 # 使用 uv
 uv run uvicorn app.main:app --reload --port 8000
-
-# 或使用虚拟环境
-uvicorn app.main:app --reload --port 8000
 ```
 
 后端 API 将在 `http://localhost:8000` 运行。

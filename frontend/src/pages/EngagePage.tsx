@@ -70,8 +70,7 @@ export const EngagePage: React.FC = () => {
         ))}
       </div>
 
-      <div className="px-6 py-6 border-b border-border-color bg-surface-light shrink-0">
-        <h1 className="text-2xl font-bold text-text-main mb-4">What's the plan?</h1>
+      <div className="px-8 py-6 border-b border-border-color bg-surface-light shrink-0 flex justify-end items-center">
         <div className="flex gap-2 overflow-x-auto no-scrollbar">
           {['All', '15m', '30m', '1h', '2h+'].map(tf => (
             <Button

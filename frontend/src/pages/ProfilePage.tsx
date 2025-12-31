@@ -11,15 +11,6 @@ export const ProfilePage: React.FC = () => {
 
   return (
     <div className="flex-1 w-full max-w-[1200px] mx-auto px-4 md:px-8 py-8 flex flex-col gap-8 overflow-y-auto">
-      <div className="flex flex-col gap-2">
-        <h1 className="text-text-main text-3xl font-bold leading-tight tracking-tight">
-          Profile & Gamification
-        </h1>
-        <p className="text-text-secondary text-base font-normal leading-normal">
-          Manage your Coreterra workflow progress, achievements, and account settings.
-        </p>
-      </div>
-
       <Card>
         <CardContent className="p-6 flex flex-col gap-6 relative overflow-hidden">
           <div className="flex items-start gap-5 relative z-10">
