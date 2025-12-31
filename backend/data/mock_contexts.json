@@ -1,0 +1,68 @@
+{
+  "contexts": [
+    {
+      "id": 1,
+      "name": "@Computer",
+      "color": "purple",
+      "icon": "computer"
+    },
+    {
+      "id": 2,
+      "name": "@Office",
+      "color": "blue",
+      "icon": "business"
+    },
+    {
+      "id": 3,
+      "name": "@Home",
+      "color": "green",
+      "icon": "home"
+    },
+    {
+      "id": 4,
+      "name": "@Errands",
+      "color": "orange",
+      "icon": "shopping_cart"
+    },
+    {
+      "id": 5,
+      "name": "Thinking",
+      "color": "indigo",
+      "icon": "psychology"
+    },
+    {
+      "id": 6,
+      "name": "Waiting For",
+      "color": "gray",
+      "icon": "hourglass_empty"
+    }
+  ],
+  "scheduledCategories": [
+    {
+      "id": 1,
+      "name": "Today",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "name": "Tomorrow",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "name": "This Week",
+      "order": 3
+    },
+    {
+      "id": 4,
+      "name": "Next Week",
+      "order": 4
+    },
+    {
+      "id": 5,
+      "name": "Someday",
+      "order": 5
+    }
+  ]
+}
+

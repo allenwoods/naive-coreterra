@@ -1,0 +1,17 @@
+{
+  "shopItems": [
+    {
+      "id": "item_xp_potion",
+      "name": "2x XP Potion",
+      "cost": 350,
+      "type": "consumable"
+    },
+    {
+      "id": "item_theme_neon",
+      "name": "Dark Mode: Neon",
+      "cost": 1000,
+      "type": "cosmetic"
+    }
+  ]
+}
+

@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alex Morgan",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCgLMjW8x240sh1Nfc2eziuKKztJOrS-snZX06O9Lu5dhonyIdfyB46tBZci1ByjltDkNwid3pE1RQpLhDIWXXNSGX7FH0jqq63r32Lnl5lzqLmLo0f891UaFnE3zYD_RFbuDZDC31Hqz0GZIX817qCiSx5ituryOweosJzbhd0Vc5ARdOHunhX-y4J1FWQ-6JnFSa2ghdmRyjYLakFeB-r3j6Ks2fzaMWK8ILuCpYjQhl6plwe7nG3l-9JVk8YVIVtPkXcQBA1Fsw",
+      "role": "Designer",
+      "level": 14,
+      "currentXP": 350,
+      "maxXP": 500,
+      "gold": 1250,
+      "streak": 14,
+      "inventory": [],
+      "stats": {
+        "focus": 15,
+        "execution": 12,
+        "planning": 8,
+        "teamwork": 10,
+        "expertise": 9,
+        "streak": 14
+      }
+    }
+  ],
+  "authCredentials": [
+    {
+      "username": "alex",
+      "password": "test",
+      "user_id": 1
+    }
+  ]
+}
+

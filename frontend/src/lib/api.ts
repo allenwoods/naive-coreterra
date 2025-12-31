@@ -125,5 +125,88 @@ export const gamificationAPI = {
   },
 };
 
+// Teams API
+export interface TeamMember {
+  id: number;
+  name: string;
+  role: string;
+  status: string;
+  capacity: number;
+  avatar: string;
+}
+
+export const teamsAPI = {
+  getAll: async () => {
+    const response = await api.get<TeamMember[]>('/api/teams');
+    return response.data;
+  },
+};
+
+// Calendar API
+export interface CalendarEvent {
+  id: number;
+  date: number;
+  type: string;
+  time?: string;
+  title: string;
+  color: string;
+  border: string;
+}
+
+export const calendarAPI = {
+  getEvents: async () => {
+    const response = await api.get<CalendarEvent[]>('/api/tasks/calendar/events');
+    return response.data;
+  },
+};
+
+// Contexts API
+export interface Context {
+  id: number;
+  name: string;
+  color: string;
+  icon: string;
+}
+
+export interface ScheduledCategory {
+  id: number;
+  name: string;
+  order: number;
+}
+
+export const contextsAPI = {
+  getAll: async () => {
+    const response = await api.get<Context[]>('/api/contexts');
+    return response.data;
+  },
+  getScheduledCategories: async () => {
+    const response = await api.get<ScheduledCategory[]>('/api/contexts/scheduled/categories');
+    return response.data;
+  },
+};
+
+// Reports API
+export interface Report {
+  id: number;
+  type: string;
+  title: string;
+  content: string;
+  icon: string;
+  date: string;
+  period: string;
+}
+
+export const reportsAPI = {
+  getAll: async (type?: string) => {
+    const params = type ? { type } : {};
+    const response = await api.get<Report[]>('/api/reports', { params });
+    return response.data;
+  },
+  getDaily: async () => {
+    const response = await api.get<Report>('/api/reports/daily');
+    return response.data;
+  },
+};
+
 export default api;
 

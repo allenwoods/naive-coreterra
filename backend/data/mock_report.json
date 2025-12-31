@@ -1,0 +1,14 @@
+{
+  "reports": [
+    {
+      "id": 1,
+      "type": "daily",
+      "title": "Daily Insight",
+      "content": "Hello！You've maintained a <strong>High Focus</strong> state for over 2 hours today. You are 15% more productive than last Tuesday!",
+      "icon": "emoji_events",
+      "date": "2025-01-01",
+      "period": "Daily"
+    }
+  ]
+}
+

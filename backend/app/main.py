@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import auth, tasks, projects, users, gamification
+from app.routers import auth, tasks, projects, users, gamification, teams, contexts, reports
 
 app = FastAPI(
     title="Coreterra API",
@@ -28,6 +28,9 @@ app.include_router(tasks.router)
 app.include_router(projects.router)
 app.include_router(users.router)
 app.include_router(gamification.router)
+app.include_router(teams.router)
+app.include_router(contexts.router)
+app.include_router(reports.router)
 
 
 @app.get("/")

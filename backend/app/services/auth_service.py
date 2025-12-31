@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 from typing import Optional
 from jose import JWTError, jwt
 from passlib.context import CryptContext
+from app.services.data_service import data_service
 
 # Secret key for JWT (in production, use environment variable)
 SECRET_KEY = "coreterra-secret-key-change-in-production"
@@ -42,22 +43,29 @@ def decode_access_token(token: str) -> Optional[dict]:
         return None
 
 
-# Hardcoded user for MVP (username: alex, password: test)
-# In production, this would be stored in a database
-HARDCODED_USER = {
-    "username": "alex",
-    "password_hash": get_password_hash("test"),  # password: "test"
-    "user_id": 1
-}
-
-
 def authenticate_user(username: str, password: str) -> Optional[dict]:
-    """Authenticate a user"""
-    if username == HARDCODED_USER["username"]:
-        if verify_password(password, HARDCODED_USER["password_hash"]):
+    """Authenticate a user using data from data_service"""
+    # Get auth credentials from data_service (unified data entry point)
+    auth_cred = data_service.get_auth_credentials(username)
+    if not auth_cred:
+        return None
+    
+    # Check if password matches
+    # If password_hash exists, verify against it; otherwise check plain password
+    if "password_hash" in auth_cred:
+        if verify_password(password, auth_cred["password_hash"]):
             return {
                 "username": username,
-                "user_id": HARDCODED_USER["user_id"]
+                "user_id": auth_cred["user_id"]
             }
+    elif "password" in auth_cred:
+        # For MVP: if plain password is stored, verify directly
+        # In production, always use password_hash
+        if password == auth_cred["password"]:
+            return {
+                "username": username,
+                "user_id": auth_cred["user_id"]
+            }
+    
     return None
 

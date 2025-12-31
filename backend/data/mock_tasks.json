@@ -1,0 +1,137 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Fix navigation z-index issue",
+      "status": "organized",
+      "createdAt": "2023-10-24T10:30:00",
+      "priority": true,
+      "xpReward": 0,
+      "assigneeId": 2
+    },
+    {
+      "id": 2,
+      "title": "Draft Q3 Financial Report",
+      "status": "organized",
+      "projectId": "p1",
+      "priority": true,
+      "difficulty": "Hard",
+      "estimatedTime": "2h",
+      "xpReward": 100,
+      "subtasks": [
+        {
+          "id": 1,
+          "text": "Gather data",
+          "done": true
+        },
+        {
+          "id": 2,
+          "text": "Charts",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Review Wireframes",
+      "status": "organized",
+      "projectId": "p1",
+      "priority": false,
+      "difficulty": "Med",
+      "estimatedTime": "15m",
+      "xpReward": 20,
+      "assigneeId": 2
+    },
+    {
+      "id": 4,
+      "title": "Email Marketing Team",
+      "status": "waiting",
+      "createdAt": "2023-10-23",
+      "priority": false
+    },
+    {
+      "id": 5,
+      "title": "Define OAuth scopes",
+      "status": "organized",
+      "difficulty": "Med",
+      "estimatedTime": "1h",
+      "xpReward": 50,
+      "assigneeId": 3
+    },
+    {
+      "title": "Test adding new task",
+      "status": "organized",
+      "priority": false,
+      "description": null,
+      "createdAt": "2025-12-31T02:13:36.096406",
+      "xpReward": 100,
+      "id": 6,
+      "projectId": "p2",
+      "difficulty": "Med",
+      "estimatedTime": "1h",
+      "subtasks": []
+    },
+    {
+      "title": "add test task",
+      "status": "clarified",
+      "priority": true,
+      "description": null,
+      "createdAt": "2025-12-31T02:25:20.845766",
+      "xpReward": 100,
+      "id": 7,
+      "difficulty": "Med",
+      "estimatedTime": "1h",
+      "subtasks": [
+        {
+          "id": 1,
+          "text": "test step 1",
+          "done": false
+        }
+      ]
+    },
+    {
+      "title": "Test task",
+      "status": "inbox",
+      "priority": false,
+      "description": null,
+      "createdAt": "2025-12-31T02:49:29.029185",
+      "xpReward": 0,
+      "id": 8
+    }
+  ],
+  "calendarEvents": [
+    {
+      "id": 1,
+      "date": 1,
+      "type": "appointment",
+      "time": "10:00 AM",
+      "title": "Team Sync",
+      "color": "bg-blue-50",
+      "border": "border-blue-500"
+    },
+    {
+      "id": 2,
+      "date": 1,
+      "type": "soft",
+      "title": "Draft Proposal",
+      "color": "bg-slate-50",
+      "border": "border-dashed border-slate-300"
+    },
+    {
+      "id": 3,
+      "date": 5,
+      "type": "deadline",
+      "title": "Q3 Financial Report",
+      "color": "bg-red-100",
+      "border": "border-red-600"
+    },
+    {
+      "id": 4,
+      "date": 6,
+      "type": "soft",
+      "title": "Review Wireframes",
+      "color": "bg-slate-50",
+      "border": "border-dashed border-slate-300"
+    }
+  ]
+}

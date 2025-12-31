@@ -94,3 +94,9 @@ async def complete_task(task_id: int, current_user: dict = Depends(get_current_u
     updated = data_service.update("tasks", task_id, task)
     return updated
 
+
+@router.get("/calendar/events")
+async def get_calendar_events(current_user: dict = Depends(get_current_user)):
+    """Get all calendar events"""
+    return data_service.get_all("calendarEvents")
+

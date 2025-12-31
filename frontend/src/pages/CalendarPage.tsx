@@ -1,20 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getCalendarDays, formatDate } from '@/lib/dateUtils';
 import { Card, CardContent } from '@/components/ui/card';
+import { calendarAPI, type CalendarEvent } from '@/lib/api';
 
 export const CalendarPage: React.FC = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
+  const [events, setEvents] = useState<CalendarEvent[]>([]);
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
   const calendarDays = getCalendarDays(year, month);
 
-  // Mock events data
-  const events = [
-    { date: 1, type: 'appointment', time: '10:00 AM', title: 'Team Sync', color: 'bg-blue-50', border: 'border-blue-500' },
-    { date: 1, type: 'soft', title: 'Draft Proposal', color: 'bg-slate-50', border: 'border-dashed border-slate-300' },
-    { date: 5, type: 'deadline', title: 'Q3 Financial Report', color: 'bg-red-100', border: 'border-red-600' },
-    { date: 6, type: 'soft', title: 'Review Wireframes', color: 'bg-slate-50', border: 'border-dashed border-slate-300' },
-  ];
+  useEffect(() => {
+    const loadEvents = async () => {
+      try {
+        const loadedEvents = await calendarAPI.getEvents();
+        setEvents(loadedEvents);
+      } catch (error) {
+        console.error('Failed to load calendar events:', error);
+      }
+    };
+    loadEvents();
+  }, []);
 
   const getEventsForDay = (day: number) => {
     return events.filter(e => e.date === day);

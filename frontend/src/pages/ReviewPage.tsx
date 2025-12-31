@@ -1,12 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useApp } from '@/context/AppContext';
+import { teamsAPI, reportsAPI, type TeamMember, type Report } from '@/lib/api';
 
 export const ReviewPage: React.FC = () => {
   const { tasks } = useApp();
   const [period, setPeriod] = useState('Daily');
-  const completedTasks = tasks.filter(t => t.status === 'completed');
+  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+  const [dailyReport, setDailyReport] = useState<Report | null>(null);
+  const completedTasks = useMemo(() => tasks.filter(t => t.status === 'completed'), [tasks]);
+
+  React.useEffect(() => {
+    const loadTeamMembers = async () => {
+      try {
+        const members = await teamsAPI.getAll();
+        setTeamMembers(members);
+      } catch (error) {
+        console.error('Failed to load team members:', error);
+      }
+    };
+    loadTeamMembers();
+  }, []);
+
+  React.useEffect(() => {
+    const loadDailyReport = async () => {
+      try {
+        const report = await reportsAPI.getDaily();
+        setDailyReport(report);
+      } catch (error) {
+        console.error('Failed to load daily report:', error);
+      }
+    };
+    loadDailyReport();
+  }, []);
 
   return (
     <div className="flex-1 flex flex-col h-full bg-background-light overflow-hidden">
@@ -68,29 +95,38 @@ export const ReviewPage: React.FC = () => {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
-                      {[
-                        { title: 'Refactor Auth Module', time: '1h 20m', xp: 150, tag: 'Dev' },
-                        { title: 'Weekly Team Sync', time: '45m', xp: 50, tag: 'Meeting' },
-                        { title: 'Review PR #402', time: '30m', xp: 75, tag: 'Code Review' },
-                        { title: 'Update Documentation', time: '1h 00m', xp: 100, tag: 'Docs' },
-                        { title: 'Fix CSS Grid Issue', time: '25m', xp: 40, tag: 'Bugfix' },
-                      ].map((task, i) => (
-                        <tr key={i} className="hover:bg-slate-50 transition-colors group">
-                          <td className="px-6 py-4">
-                            <div className="font-bold text-slate-800 text-sm group-hover:text-primary transition-colors cursor-pointer">
-                              {task.title}
-                            </div>
-                            <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded border border-slate-200 mt-1 inline-block uppercase tracking-wide">
-                              {task.tag}
-                            </span>
+                      {completedTasks.length === 0 ? (
+                        <tr>
+                          <td colSpan={3} className="px-6 py-8 text-center text-slate-400 text-sm">
+                            No completed tasks yet
                           </td>
-                          <td className="px-6 py-4 text-sm text-slate-600 font-medium flex items-center gap-1">
-                            <span className="material-symbols-outlined text-[16px] text-slate-400">schedule</span>
-                            {task.time}
-                          </td>
-                          <td className="px-6 py-4 text-sm text-primary font-bold">+{task.xp} XP</td>
                         </tr>
-                      ))}
+                      ) : (
+                        completedTasks.slice(0, 10).map((task) => {
+                          // Calculate time from estimatedTime or use default
+                          const time = task.estimatedTime || 'N/A';
+                          const xp = task.xpReward || 0;
+                          const tag = task.projectId ? 'Project' : task.difficulty || 'Task';
+                          
+                          return (
+                            <tr key={task.id} className="hover:bg-slate-50 transition-colors group">
+                              <td className="px-6 py-4">
+                                <div className="font-bold text-slate-800 text-sm group-hover:text-primary transition-colors cursor-pointer">
+                                  {task.title}
+                                </div>
+                                <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded border border-slate-200 mt-1 inline-block uppercase tracking-wide">
+                                  {tag}
+                                </span>
+                              </td>
+                              <td className="px-6 py-4 text-sm text-slate-600 font-medium flex items-center gap-1">
+                                <span className="material-symbols-outlined text-[16px] text-slate-400">schedule</span>
+                                {time}
+                              </td>
+                              <td className="px-6 py-4 text-sm text-primary font-bold">+{xp} XP</td>
+                            </tr>
+                          );
+                        })
+                      )}
                     </tbody>
                   </table>
                 </div>
@@ -105,35 +141,62 @@ export const ReviewPage: React.FC = () => {
             </CardTitle>
             <Card>
               <CardContent className="p-6 flex flex-col gap-5">
-                <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <div className="flex items-center gap-2">
-                      <div className="size-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-[10px]">
-                        SJ
+                {teamMembers.length === 0 ? (
+                  <div className="text-center py-4 text-slate-400 text-sm">
+                    No collaboration data available
+                  </div>
+                ) : (
+                  teamMembers.slice(0, 5).map((member, index) => {
+                    // Calculate collaboration time from tasks assigned to this member
+                    const memberTasks = tasks.filter(t => t.assigneeId === member.id && t.status === 'completed');
+                    const totalTime = memberTasks.reduce((sum, task) => {
+                      const timeStr = task.estimatedTime || '0m';
+                      const match = timeStr.match(/(\d+)([hm])/);
+                      if (match) {
+                        const value = parseInt(match[1]);
+                        const unit = match[2];
+                        return sum + (unit === 'h' ? value * 60 : value);
+                      }
+                      return sum;
+                    }, 0);
+                    const hours = Math.floor(totalTime / 60);
+                    const minutes = totalTime % 60;
+                    const timeDisplay = hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
+                    
+                    // Calculate percentage (mock calculation based on capacity)
+                    const percentage = Math.min(member.capacity, 100);
+                    
+                    // Get initials for avatar
+                    const initials = member.name.split(' ').map(n => n[0]).join('').toUpperCase();
+                    
+                    // Color based on index
+                    const colors = [
+                      { bg: 'bg-indigo-100', text: 'text-indigo-600', bar: 'bg-indigo-500' },
+                      { bg: 'bg-purple-100', text: 'text-purple-600', bar: 'bg-purple-500' },
+                      { bg: 'bg-blue-100', text: 'text-blue-600', bar: 'bg-blue-500' },
+                      { bg: 'bg-green-100', text: 'text-green-600', bar: 'bg-green-500' },
+                      { bg: 'bg-orange-100', text: 'text-orange-600', bar: 'bg-orange-500' },
+                    ];
+                    const color = colors[index % colors.length];
+                    
+                    return (
+                      <div key={member.id}>
+                        <div className="flex items-center justify-between mb-1.5">
+                          <div className="flex items-center gap-2">
+                            <div className={`size-6 rounded-full ${color.bg} ${color.text} flex items-center justify-center font-bold text-[10px]`}>
+                              {initials}
+                            </div>
+                            <span className="text-sm font-bold text-slate-700">{member.name}</span>
+                          </div>
+                          <span className="text-xs font-bold text-slate-900">{timeDisplay}</span>
+                        </div>
+                        <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                          <div className={`${color.bar} h-full`} style={{ width: `${percentage}%` }} />
+                        </div>
                       </div>
-                      <span className="text-sm font-bold text-slate-700">Sarah Jenkins</span>
-                    </div>
-                    <span className="text-xs font-bold text-slate-900">2h 15m</span>
-                  </div>
-                  <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                    <div className="bg-indigo-500 h-full w-[65%]" />
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <div className="flex items-center gap-2">
-                      <div className="size-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-[10px]">
-                        MC
-                      </div>
-                      <span className="text-sm font-bold text-slate-700">Michael Chen</span>
-                    </div>
-                    <span className="text-xs font-bold text-slate-900">45m</span>
-                  </div>
-                  <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                    <div className="bg-purple-500 h-full w-[25%]" />
-                  </div>
-                </div>
+                    );
+                  })
+                )}
               </CardContent>
             </Card>
 
@@ -142,13 +205,24 @@ export const ReviewPage: React.FC = () => {
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="p-1.5 bg-white/20 rounded-lg">
-                    <span className="material-symbols-outlined text-yellow-300">emoji_events</span>
+                    <span className="material-symbols-outlined text-yellow-300">
+                      {dailyReport?.icon || 'emoji_events'}
+                    </span>
                   </div>
-                  <CardTitle className="font-bold text-lg">Daily Insight</CardTitle>
+                  <CardTitle className="font-bold text-lg">
+                    {dailyReport?.title || 'Daily Insight'}
+                  </CardTitle>
                 </div>
-                <p className="text-blue-50 text-sm leading-relaxed mb-4 font-medium opacity-90">
-                  You've maintained a <strong>High Focus</strong> state for over 2 hours today. You are 15% more productive than last Tuesday!
-                </p>
+                {dailyReport ? (
+                  <p 
+                    className="text-blue-50 text-sm leading-relaxed mb-4 font-medium opacity-90"
+                    dangerouslySetInnerHTML={{ __html: dailyReport.content }}
+                  />
+                ) : (
+                  <p className="text-blue-50 text-sm leading-relaxed mb-4 font-medium opacity-90">
+                    Loading insight...
+                  </p>
+                )}
                 <Button className="w-full bg-white text-primary hover:bg-blue-50 transition-colors rounded-xl py-2.5 text-sm font-bold shadow-sm">
                   Share Report
                 </Button>

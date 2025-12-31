@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useApp } from '@/context/AppContext';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -6,19 +6,44 @@ import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useDragAndDrop } from '@/hooks/useDragAndDrop';
 import { DragDropZone } from '@/components/features/DragDropZone';
+import { teamsAPI, contextsAPI, type TeamMember, type Context, type ScheduledCategory } from '@/lib/api';
 
 export const OrganizePage: React.FC = () => {
   const { tasks, projects, updateTask } = useApp();
   const [activeTab, setActiveTab] = useState('taskType');
+  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+  const [contexts, setContexts] = useState<Context[]>([]);
+  const [scheduledCategories, setScheduledCategories] = useState<ScheduledCategory[]>([]);
   const clarifiedItems = tasks.filter(t => t.status === 'clarified');
   const { handleDragStart, handleDragOver, handleDragLeave, handleDrop, handleDragEnd } = useDragAndDrop();
 
-  // Mock team members data
-  const teamMembers = [
-    { id: 1, name: 'Sarah Jenkins', role: 'Frontend', status: 'Available', capacity: 35, avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d' },
-    { id: 2, name: 'Michael Chen', role: 'QA Lead', status: 'Busy', capacity: 95, avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704d' },
-    { id: 3, name: 'Alex Morgan', role: 'Designer', status: 'Available', capacity: 20, avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCgLMjW8x240sh1Nfc2eziuKKztJOrS-snZX06O9Lu5dhonyIdfyB46tBZci1ByjltDkNwid3pE1RQpLhDIWXXNSGX7FH0jqq63r32Lnl5lzqLmLo0f891UaFnE3zYD_RFbuDZDC31Hqz0GZIX817qCiSx5ituryOweosJzbhd0Vc5ARdOHunhX-y4J1FWQ-6JnFSa2ghdmRyjYLakFeB-r3j6Ks2fzaMWK8ILuCpYjQhl6plwe7nG3l-9JVk8YVIVtPkXcQBA1Fsw' },
-  ];
+  useEffect(() => {
+    const loadTeamMembers = async () => {
+      try {
+        const members = await teamsAPI.getAll();
+        setTeamMembers(members);
+      } catch (error) {
+        console.error('Failed to load team members:', error);
+      }
+    };
+    loadTeamMembers();
+  }, []);
+
+  useEffect(() => {
+    const loadContexts = async () => {
+      try {
+        const [contextsData, scheduledData] = await Promise.all([
+          contextsAPI.getAll(),
+          contextsAPI.getScheduledCategories()
+        ]);
+        setContexts(contextsData);
+        setScheduledCategories(scheduledData.sort((a, b) => a.order - b.order));
+      } catch (error) {
+        console.error('Failed to load contexts:', error);
+      }
+    };
+    loadContexts();
+  }, []);
 
   const unassignedTasks = tasks.filter(t => !t.assigneeId && t.status !== 'completed' && t.status !== 'trash');
 
@@ -173,15 +198,15 @@ export const OrganizePage: React.FC = () => {
                   </CardHeader>
                   <CardContent>
                     <div className="flex-1 overflow-y-auto space-y-3">
-                      {['@Computer', '@Office', '@Home', '@Errands', 'Thinking', 'Waiting For'].map(ctx => (
+                      {contexts.map(ctx => (
                         <DragDropZone
-                          key={ctx}
-                          id={`context-${ctx}`}
-                          onDrop={(item) => handleTaskDrop(item, `context-${ctx}`)}
+                          key={ctx.id}
+                          id={`context-${ctx.name}`}
+                          onDrop={(item) => handleTaskDrop(item, `context-${ctx.name}`)}
                           className="bg-white rounded-lg border border-purple-100 shadow-sm hover:shadow-md transition-all cursor-pointer group"
                         >
                           <CardContent className="p-3">
-                            <span className="text-sm font-bold text-slate-700 group-hover:text-purple-700">{ctx}</span>
+                            <span className="text-sm font-bold text-slate-700 group-hover:text-purple-700">{ctx.name}</span>
                           </CardContent>
                         </DragDropZone>
                       ))}
@@ -203,15 +228,15 @@ export const OrganizePage: React.FC = () => {
                   </CardHeader>
                   <CardContent>
                     <div className="flex-1 overflow-y-auto space-y-3">
-                      {['Today', 'Tomorrow', 'This Week', 'Next Week', 'Someday'].map(time => (
+                      {scheduledCategories.map(category => (
                         <DragDropZone
-                          key={time}
-                          id={`schedule-${time}`}
-                          onDrop={(item) => handleTaskDrop(item, `schedule-${time}`)}
+                          key={category.id}
+                          id={`schedule-${category.name}`}
+                          onDrop={(item) => handleTaskDrop(item, `schedule-${category.name}`)}
                           className="bg-white rounded-lg border border-orange-100 shadow-sm hover:shadow-md transition-all cursor-pointer group"
                         >
                           <CardContent className="p-3">
-                            <span className="text-sm font-bold text-slate-700 group-hover:text-orange-700">{time}</span>
+                            <span className="text-sm font-bold text-slate-700 group-hover:text-orange-700">{category.name}</span>
                           </CardContent>
                         </DragDropZone>
                       ))}

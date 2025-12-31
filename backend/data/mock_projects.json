@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "id": "p1",
+      "title": "Website Redesign",
+      "progress": 65,
+      "totalTasks": 10,
+      "completedTasks": 6
+    },
+    {
+      "id": "p2",
+      "title": "Mobile App API",
+      "progress": 30,
+      "totalTasks": 5,
+      "completedTasks": 1
+    }
+  ]
+}
+

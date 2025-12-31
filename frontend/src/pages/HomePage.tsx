@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useApp } from '@/context/AppContext';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { contextsAPI, type Context } from '@/lib/api';
 
 export const HomePage: React.FC = () => {
   const navigate = useNavigate();
   const { tasks, projects, user } = useApp();
+  const [contexts, setContexts] = useState<Context[]>([]);
+
+  useEffect(() => {
+    const loadContexts = async () => {
+      try {
+        const contextsData = await contextsAPI.getAll();
+        setContexts(contextsData);
+      } catch (error) {
+        console.error('Failed to load contexts:', error);
+      }
+    };
+    loadContexts();
+  }, []);
 
   const inboxTasks = tasks.filter(t => t.status === 'inbox');
   const organizedTasks = tasks.filter(t => t.status === 'organized' || t.status === 'clarified');
@@ -161,8 +175,12 @@ export const HomePage: React.FC = () => {
                   <span className="material-symbols-outlined text-[20px]">bookmark</span>
                   <span className="text-xs font-bold uppercase tracking-wider">Contexts</span>
                 </div>
-                <div className="text-2xl font-bold text-slate-800">12 Lists</div>
-                <div className="text-xs text-slate-500">@Work, @Home, @Errands...</div>
+                <div className="text-2xl font-bold text-slate-800">{contexts.length} Lists</div>
+                <div className="text-xs text-slate-500">
+                  {contexts.length > 0 
+                    ? contexts.slice(0, 3).map(c => c.name).join(', ') + (contexts.length > 3 ? '...' : '')
+                    : 'No contexts'}
+                </div>
               </div>
             </div>
           </CardContent>
